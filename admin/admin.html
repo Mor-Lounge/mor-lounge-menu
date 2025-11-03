@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<div id="loginScreen" class="centered">
+  <h2>Admin Girişi</h2>
+  <input type="password" id="adminPassword" placeholder="Şifre">
+  <button id="loginBtn">Giriş</button>
+  <div id="loginError" class="error">Şifre yanlış!</div>
+</div>
+
+<div id="adminPanel" style="display:none">
+  <h1>Mor Lounge Yönetim Paneli</h1>
+
+  <div class="panel">
+    <h2>Kategoriler</h2>
+    <button id="openAddCategoryModal">Yeni Kategori Ekle</button>
+    <div id="categoriesList" class="sortable"></div>
+  </div>
+
+  <div class="panel">
+    <h2>Ürünler</h2>
+    <select id="categorySelect"></select>
+    <button id="openAddProductModal">Yeni Ürün Ekle</button>
+    <div id="productsList" class="sortable"></div>
+  </div>
+</div>
+
+<!-- Modal Templates -->
+<div id="categoryModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeCategoryModal()">&times;</span>
+    <h2>Kategori Ekle/Düzenle</h2>
+    <input type="text" id="modalCategoryName" placeholder="Kategori Adı">
+    <input type="text" id="modalCategoryImg" placeholder="Kategori Görsel URL">
+    <button id="saveCategoryBtn">Kaydet</button>
+  </div>
+</div>
+
+<div id="productModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeProductModal()">&times;</span>
+    <h2>Ürün Ekle/Düzenle</h2>
+    <input type="text" id="modalProductName" placeholder="Ürün Adı">
+    <input type="text" id="modalProductPrice" placeholder="Fiyat">
+    <input type="text" id="modalProductDesc" placeholder="Açıklama">
+    <input type="text" id="modalProductImg" placeholder="Görsel URL">
+    <select id="modalProductCategory"></select>
+    <button id="saveProductBtn">Kaydet</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
