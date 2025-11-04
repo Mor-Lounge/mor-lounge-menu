@@ -128,3 +128,11 @@ body.dark .card {
 .card-content h3 { margin: 0; font-size: 18px; }
 .card-content p { font-size: 14px; margin: 6px 0; color: inherit; }
 .price { color: var(--accent); font-weight: bold; margin-top: 6px; }
+body.dark #siteLogo {
+  content:url("logo-light.png");
+}
+
+body:not(.dark) #siteLogo {
+  content:url("logo-dark.png");
+}
+
