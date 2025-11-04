@@ -1,4 +1,14 @@
-const webAppUrl = "https://script.google.com/macros/s/AKfycbwPnOooa5KIiVOuea9Oslr-2cY33G5Kpwhy0lcPaJMmVax6u6YIAwiZ7xsQnfO9Fm31Kw/exec"; // Apps Script Web App URL
+// admin.js - FIXED version
+// Açıklama:
+// - Google Apps Script endpoint'in "full replace" olduğunu söyledin.
+// - Bu yüzden "update" isteklerinde eksik/boş alan gönderirsek SHEET'teki hücreler siliniyor.
+// - Çözüm: update isteği göndermeden önce mevcut satırı (products dizisinden) merge et,
+//   ve eğer modal inputları boşsa mevcut değerleri koru ("" ile overwrite etmeyelim).
+// - Ayrıca kategori düzenleme sırasında tüm ürünleri güncellerken eğer modalda CategoryImg boşsa
+//   her ürünün mevcut CategoryImg'sini koruruz.
+
+// Apps Script Web App URL (senin kullandığın URL'i koru)
+const webAppUrl = "https://script.google.com/macros/s/AKfycbx4q_RQ3YSLDOB9nD7B-8KrKPx2Ouu4UKtQJ2fjDnp5sXD1tGQsFhqew8C2HNFYBQjFDQ/exec";
 const PASSWORD = "restoran123";
 
 let categories = [];
@@ -19,11 +29,34 @@ document.getElementById("loginBtn").onclick = () => {
 async function fetchData(){
   const res = await fetch(webAppUrl);
   const data = await res.json();
+
+  // categories: uniq Kategori isimleri (falsyleri filtrele)
   categories = [...new Set(data.map(d => d.Kategori).filter(Boolean))];
+
+  // products: tam satır objeleri (Apps Script'ten gelen her row)
   products = data;
+
   updateCategoryUI();
   updateProductUI();
   updateCategorySelect();
+}
+
+// Yardımcı: gelen yeniData objesini mevcut existing ile merge et.
+// Eğer newData'da bir alan "" ise existing'in değerini koru.
+// Eğer newData içinde undefined ise yine existing'i koru.
+// Bu şekilde full-replace backend'de mevcut değer silinmez.
+function mergePreserveEmpty(existing = {}, newData = {}) {
+  const merged = { ...existing };
+  Object.keys(newData).forEach(key => {
+    const val = newData[key];
+    // sadece boş string ile overwrite etmiyoruz
+    if (val === "" || val === null || val === undefined) {
+      // skip -> mevcut değeri koru (do nothing)
+    } else {
+      merged[key] = val;
+    }
+  });
+  return merged;
 }
 
 // Kategori UI
@@ -54,7 +87,7 @@ function updateProductUI(){
     const div=document.createElement("div");
     div.className="item";
     div.innerHTML=`
-      <img src="${p["Görsel URL"]}" alt="${p["Ürün Adı"]}">
+      <img src="${p["Görsel URL"] || ''}" alt="${p["Ürün Adı"]}">
       <div class="details">
         <strong>${p["Ürün Adı"]}</strong>
         <span>₺${p.Fiyat}</span>
@@ -107,54 +140,110 @@ document.getElementById("openAddProductModal").onclick = ()=>{
 function closeProductModal(){ document.getElementById("productModal").style.display="none"; }
 
 // Kaydet butonları
+
+// Kategori kaydet (yeni veya düzenle)
 document.getElementById("saveCategoryBtn").onclick = async ()=>{
   const name=document.getElementById("modalCategoryName").value.trim();
+  const modalImg = document.getElementById("modalCategoryImg").value.trim();
   if(!name) return alert("Kategori adı girin");
+
   if(editingCategoryIndex===null){
-    // Yeni kategori ekle
-    const data={action:"add", data:{Kategori:name,"Ürün Adı":"","Fiyat":"","Açıklama":"","Görsel URL":"","CategoryImg":document.getElementById("modalCategoryImg").value}};
-    await fetch(webAppUrl,{method:"POST",body:JSON.stringify(data)});
+    // Yeni kategori ekle: boş bir ürün satırı ekleyerek kategori oluşturuyorsun (var olan mantık)
+    const data = {
+      action:"add",
+      data:{
+        Kategori: name,
+        "Ürün Adı": "",
+        Fiyat: "",
+        Açıklama: "",
+        "Görsel URL": "",
+        CategoryImg: modalImg || ""
+      }
+    };
+    await fetch(webAppUrl, { method:"POST", body: JSON.stringify(data) });
   } else {
-    // Düzenle
-    const oldName=categories[editingCategoryIndex];
-    products.filter(p=>p.Kategori===oldName).forEach(async p=>{
-      const data={action:"update", id:p._id, data:{...p,Kategori:name,CategoryImg:document.getElementById("modalCategoryImg").value}};
-      await fetch(webAppUrl,{method:"POST",body:JSON.stringify(data)});
-    });
+    // Kategori düzenle: var olan kategori adını -> yeni adına çevir
+    const oldName = categories[editingCategoryIndex];
+    // her bir ürünü full-replace yapan backend olduğu için, her ürün için mevcut satırdan merge yapıp gönder
+    const toUpdate = products.filter(p=>p.Kategori===oldName);
+    for(const p of toUpdate){
+      // build updated payload: koruma -> eğer modalImg boşsa p.CategoryImg korunsun
+      const newDataPartial = {
+        ...p, // start with full row to ensure we have all fields (we will override soon)
+        Kategori: name,
+        // set CategoryImg only if provided; mergePreserveEmpty will keep existing if empty
+        CategoryImg: modalImg === "" ? undefined : modalImg
+      };
+      // mergePreserveEmpty: will keep p'nin değerlerini eğer undefined/"" varsa
+      const merged = mergePreserveEmpty(p, newDataPartial);
+
+      const payload = { action: "update", id: p._id, data: merged };
+      await fetch(webAppUrl, { method: "POST", body: JSON.stringify(payload) });
+    }
   }
+
   closeCategoryModal();
-  fetchData();
+  await fetchData();
 };
 
+// Ürün kaydet (yeni veya düzenle)
 document.getElementById("saveProductBtn").onclick = async ()=>{
   const name=document.getElementById("modalProductName").value.trim();
   if(!name) return alert("Ürün adı girin");
-  const data={action:editingProductId===null?"add":"update", id:editingProductId, data:{
-    Kategori:document.getElementById("modalProductCategory").value,
-    "Ürün Adı":name,
-    Fiyat:document.getElementById("modalProductPrice").value,
-    Açıklama:document.getElementById("modalProductDesc").value,
-    "Görsel URL":document.getElementById("modalProductImg").value
-  }};
-  await fetch(webAppUrl,{method:"POST",body:JSON.stringify(data)});
-  closeProductModal(); fetchData();
+
+  const newPartial = {
+    Kategori: document.getElementById("modalProductCategory").value,
+    "Ürün Adı": name,
+    Fiyat: document.getElementById("modalProductPrice").value,
+    Açıklama: document.getElementById("modalProductDesc").value,
+    "Görsel URL": document.getElementById("modalProductImg").value.trim()
+  };
+
+  if(editingProductId===null){
+    // Yeni ürün ekle -> add
+    // if Görsel URL is empty, set to "" (that's fine for new)
+    const payload = { action: "add", data: newPartial };
+    await fetch(webAppUrl, { method: "POST", body: JSON.stringify(payload) });
+  } else {
+    // Düzenleme -> update (backend full-replace) -> merge with existing product
+    const existing = products.find(p=>p._id===editingProductId);
+    if(!existing) {
+      alert("Mevcut ürün bulunamadı. Yeniden yükleyin ve tekrar deneyin.");
+      closeProductModal();
+      await fetchData();
+      return;
+    }
+
+    // Eğer kullanıcı Görsel URL inputunu boş bıraktıysa mevcut görseli koru.
+    const merged = mergePreserveEmpty(existing, newPartial);
+
+    // Ayrıca CategoryImg gibi diğer category-level alanları da existing içine zaten var ise korunur.
+
+    const payload = { action: "update", id: editingProductId, data: merged };
+    await fetch(webAppUrl, { method: "POST", body: JSON.stringify(payload) });
+  }
+
+  closeProductModal(); await fetchData();
 };
 
 // Düzenle modları
 function openEditCategory(index){
   editingCategoryIndex=index;
   document.getElementById("modalCategoryName").value=categories[index];
-  document.getElementById("modalCategoryImg").value=products.find(p=>p.Kategori===categories[index])?.CategoryImg||"";
+  // CategoryImg'i products dizisinden al (ilk bulunan üründen)
+  const p = products.find(pr=>pr.Kategori===categories[index]);
+  document.getElementById("modalCategoryImg").value = p?.CategoryImg || "";
   document.getElementById("categoryModal").style.display="block";
 }
 function openEditProduct(id){
   editingProductId=id;
   const p=products.find(pr=>pr._id===id);
-  document.getElementById("modalProductName").value=p["Ürün Adı"];
-  document.getElementById("modalProductPrice").value=p.Fiyat;
-  document.getElementById("modalProductDesc").value=p.Açıklama;
-  document.getElementById("modalProductImg").value=p["Görsel URL"];
-  document.getElementById("modalProductCategory").value=p.Kategori;
+  if(!p) return alert("Ürün bulunamadı");
+  document.getElementById("modalProductName").value=p["Ürün Adı"] || "";
+  document.getElementById("modalProductPrice").value=p.Fiyat || "";
+  document.getElementById("modalProductDesc").value=p.Açıklama || "";
+  document.getElementById("modalProductImg").value=p["Görsel URL"] || "";
+  document.getElementById("modalProductCategory").value=p.Kategori || "";
   document.getElementById("productModal").style.display="block";
 }
 
@@ -162,13 +251,13 @@ function openEditProduct(id){
 async function deleteProduct(id){
   if(!confirm("Bu ürünü silmek istediğinize emin misiniz?")) return;
   await fetch(webAppUrl,{method:"POST",body:JSON.stringify({action:"delete",id})});
-  fetchData();
+  await fetchData();
 }
 async function deleteCategory(index){
   const catName=categories[index];
   if(!confirm(`"${catName}" kategorisini ve tüm ürünlerini silmek istediğinize emin misiniz?`)) return;
   for(const p of products.filter(p=>p.Kategori===catName)) await fetch(webAppUrl,{method:"POST",body:JSON.stringify({action:"delete",id:p._id})});
-  fetchData();
+  await fetchData();
 }
 
 // Sıralama (drag & drop)
