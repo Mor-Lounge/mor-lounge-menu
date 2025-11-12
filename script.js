@@ -142,38 +142,3 @@ themeBtn.addEventListener("click", () => {
 });
 document.body.classList.add("dark");
 themeBtn.textContent = "☀️";
-/**************
- * HIZ TESTİ – JSON YÜKLEME ANALİZİ
- **************/
-(async () => {
-  const jsonUrl = "https://raw.githubusercontent.com/Mor-Lounge/mor-lounge-menu/main/data/menu.json";
-  const start = performance.now();
-  const res = await fetch(`${jsonUrl}?t=${Date.now()}`, { cache: "no-cache" });
-  const text = await res.text();
-  const end = performance.now();
-
-  // sonuçları hesapla
-  const sizeKB = (new Blob([text]).size / 1024).toFixed(2);
-  const timeMS = (end - start).toFixed(0);
-
-  console.log("🧠 Menü JSON Test Sonucu");
-  console.log("📦 Boyut:", sizeKB, "KB");
-  console.log("⚡ Yükleme Süresi:", timeMS, "ms");
-  console.log("🗂️ Kayıt Sayısı:", (JSON.parse(text)?.length || 0));
-
-  // sayfada göstermek istersen (geçici)
-  const testInfo = document.createElement("div");
-  testInfo.style.position = "fixed";
-  testInfo.style.bottom = "10px";
-  testInfo.style.right = "10px";
-  testInfo.style.padding = "10px 15px";
-  testInfo.style.background = "rgba(0,0,0,0.7)";
-  testInfo.style.color = "#fff";
-  testInfo.style.fontFamily = "monospace";
-  testInfo.style.borderRadius = "8px";
-  testInfo.style.fontSize = "12px";
-  testInfo.style.zIndex = "9999";
-  testInfo.textContent = `⚡ JSON: ${sizeKB} KB | ${timeMS} ms | ${JSON.parse(text)?.length || 0} kayıt`;
-  document.body.appendChild(testInfo);
-})();
-
