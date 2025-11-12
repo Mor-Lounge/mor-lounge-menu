@@ -1,24 +1,23 @@
 // ============================
-//   Mor Lounge Menü - Final Optimized
-//   JSON + Sheets fallback + Preload
+//   Mor Lounge Menü - Final Turbo
+//   JSON + Sheets fallback + Smart Preload
 // ============================
 
 // 🔧 Ayarlar
 const sheetId = "163c-Dcd0b_u7jLyKAH9qwqZdxoNYW4GHk8n5HXjFAiE";
 const GVIZ_URL = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json`;
-const JSON_URL = `https://raw.githubusercontent.com/Mor-Lounge/mor-lounge-menu/main/data/menu.json?t=${Date.now()}`; // dinamik, cache'siz
+const JSON_URL = `https://raw.githubusercontent.com/Mor-Lounge/mor-lounge-menu/main/data/menu.json?t=${Date.now()}`; // hep güncel
 
 // HTML elementleri
-const catContainer = document.getElementById('categories');
-const menuContainer = document.getElementById('menu');
-const themeBtn = document.getElementById('themeToggle');
+const catContainer = document.getElementById("categories");
+const menuContainer = document.getElementById("menu");
+const themeBtn = document.getElementById("themeToggle");
 
 // Başlat
 init();
 
 async function init() {
   try {
-    // Önce GitHub JSON'dan oku (hızlı)
     const res = await fetch(JSON_URL, { cache: "no-cache" });
     if (!res.ok) throw new Error("menu.json bulunamadı");
     const json = await res.json();
@@ -26,7 +25,7 @@ async function init() {
     buildUI(data);
   } catch (err) {
     console.warn("menu.json okunamadı, Sheets'ten yükleniyor →", err.message);
-    const gvizText = await fetch(GVIZ_URL).then(r => r.text());
+    const gvizText = await fetch(GVIZ_URL).then((r) => r.text());
     const data = parseGviz(gvizText);
     buildUI(data);
   }
@@ -38,7 +37,7 @@ async function init() {
 
 function normalizeJson(arr) {
   const data = {};
-  arr.forEach(row => {
+  arr.forEach((row) => {
     const category = row["Kategori"] || "";
     const name = row["Ürün Adı"] || "";
     const price = row["Fiyat"] || "";
@@ -56,13 +55,13 @@ function parseGviz(rep) {
   const jsonData = JSON.parse(rep.substring(47, rep.length - 2));
   const rows = jsonData.table.rows;
   const data = {};
-  rows.forEach(r => {
-    const category = r.c[0]?.v || '';
-    const name = r.c[1]?.v || '';
-    const price = r.c[2]?.v || '';
-    const desc = r.c[3]?.v || '';
-    const img = r.c[4]?.v || '';
-    const catImg = r.c[5]?.v || '';
+  rows.forEach((r) => {
+    const category = r.c[0]?.v || "";
+    const name = r.c[1]?.v || "";
+    const price = r.c[2]?.v || "";
+    const desc = r.c[3]?.v || "";
+    const img = r.c[4]?.v || "";
+    const catImg = r.c[5]?.v || "";
     if (!data[category]) data[category] = { items: [], img: catImg };
     data[category].items.push({ name, price, desc, img });
   });
@@ -85,18 +84,22 @@ function buildUI(data) {
     catContainer.appendChild(div);
   });
 
-  if (cats.length) showCategory(cats[0][0], catContainer.querySelector(".category-card"), data);
+  if (cats.length)
+    showCategory(cats[0][0], catContainer.querySelector(".category-card"), data);
+
   lazyLoadCategoryImages();
-  preloadImages(data); // 🔥 görselleri belleğe al (yeni eklendi)
+  smartPreloadImages(data); // ⚡ akıllı preload sistemi
 }
 
 function showCategory(category, element, data) {
-  document.querySelectorAll(".category-card").forEach(el => el.classList.remove("active"));
+  document
+    .querySelectorAll(".category-card")
+    .forEach((el) => el.classList.remove("active"));
   element.classList.add("active");
   menuContainer.innerHTML = "";
   const fragment = document.createDocumentFragment();
 
-  (data[category]?.items || []).forEach(item => {
+  (data[category]?.items || []).forEach((item) => {
     const card = document.createElement("div");
     card.className = "card";
     card.innerHTML = `
@@ -114,43 +117,74 @@ function showCategory(category, element, data) {
 }
 
 // ============================
-//  Görselleri arka planda belleğe al (preload)
+//  ⚡ Akıllı (Smart) Görsel Yükleme
 // ============================
-function preloadImages(data) {
-  Object.values(data).forEach(cat => {
-    cat.items.forEach(item => {
-      const img = new Image();
-      img.src = item.img + "?v=1";
+
+function smartPreloadImages(data) {
+  const allImages = [];
+  Object.values(data).forEach((cat) => {
+    cat.items.forEach((item) => {
+      allImages.push(item.img + "?v=1");
     });
   });
+
+  // Görselleri arka planda yavaşça önceden yükle
+  let loaded = 0;
+  const total = allImages.length;
+  const batchSize = 8; // aynı anda 8 istek
+  let index = 0;
+
+  function loadNextBatch() {
+    const batch = allImages.slice(index, index + batchSize);
+    batch.forEach((src) => {
+      const img = new Image();
+      img.onload = () => {
+        loaded++;
+        // Eğer ilk 20 görsel geldiyse, sayfa anında görsel gösterir
+        if (loaded === 20) document.body.classList.add("images-ready");
+      };
+      img.src = src;
+    });
+    index += batchSize;
+    if (index < allImages.length) setTimeout(loadNextBatch, 150);
+  }
+
+  loadNextBatch();
 }
 
 // ============================
 //  Lazy load (kategori görselleri)
 // ============================
+
 function lazyLoadCategoryImages() {
-  const obs = new IntersectionObserver((entries, o) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const bg = el.dataset.bg;
-        if (bg) {
-          el.style.backgroundImage = `url(${bg}?v=1)`;
-          el.removeAttribute("data-bg");
+  const obs = new IntersectionObserver(
+    (entries, o) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const bg = el.dataset.bg;
+          if (bg) {
+            el.style.backgroundImage = `url(${bg}?v=1)`;
+            el.removeAttribute("data-bg");
+          }
+          o.unobserve(el);
         }
-        o.unobserve(el);
-      }
-    });
-  }, { rootMargin: "150px", threshold: 0.1 });
-  document.querySelectorAll(".category-card").forEach(el => obs.observe(el));
+      });
+    },
+    { rootMargin: "150px", threshold: 0.1 }
+  );
+  document.querySelectorAll(".category-card").forEach((el) => obs.observe(el));
 }
 
 // ============================
 //  Tema (dark/light)
 // ============================
+
 themeBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark");
-  themeBtn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+  themeBtn.textContent = document.body.classList.contains("dark")
+    ? "☀️"
+    : "🌙";
 });
 document.body.classList.add("dark");
 themeBtn.textContent = "☀️";
