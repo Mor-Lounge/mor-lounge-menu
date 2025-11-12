@@ -1,12 +1,12 @@
 // ============================
-//   Mor Lounge Menü - Final
-//   JSON + Sheets fallback
+//   Mor Lounge Menü - Final Optimized
+//   JSON + Sheets fallback + Preload
 // ============================
 
 // 🔧 Ayarlar
 const sheetId = "163c-Dcd0b_u7jLyKAH9qwqZdxoNYW4GHk8n5HXjFAiE";
 const GVIZ_URL = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json`;
-const JSON_URL = "data/menu.json"; // GitHub’da otomatik güncellenecek
+const JSON_URL = `https://raw.githubusercontent.com/Mor-Lounge/mor-lounge-menu/main/data/menu.json?t=${Date.now()}`; // dinamik, cache'siz
 
 // HTML elementleri
 const catContainer = document.getElementById('categories');
@@ -18,7 +18,7 @@ init();
 
 async function init() {
   try {
-    // Önce local JSON'dan oku (hızlı)
+    // Önce GitHub JSON'dan oku (hızlı)
     const res = await fetch(JSON_URL, { cache: "no-cache" });
     if (!res.ok) throw new Error("menu.json bulunamadı");
     const json = await res.json();
@@ -87,6 +87,7 @@ function buildUI(data) {
 
   if (cats.length) showCategory(cats[0][0], catContainer.querySelector(".category-card"), data);
   lazyLoadCategoryImages();
+  preloadImages(data); // 🔥 görselleri belleğe al (yeni eklendi)
 }
 
 function showCategory(category, element, data) {
@@ -99,7 +100,7 @@ function showCategory(category, element, data) {
     const card = document.createElement("div");
     card.className = "card";
     card.innerHTML = `
-      <img src="${item.img}" alt="${item.name}" loading="lazy">
+      <img src="${item.img}?v=1" alt="${item.name}" loading="lazy" decoding="async">
       <div class="card-content">
         <h3>${item.name}</h3>
         <p class="desc">${item.desc || ""}</p>
@@ -113,9 +114,20 @@ function showCategory(category, element, data) {
 }
 
 // ============================
+//  Görselleri arka planda belleğe al (preload)
+// ============================
+function preloadImages(data) {
+  Object.values(data).forEach(cat => {
+    cat.items.forEach(item => {
+      const img = new Image();
+      img.src = item.img + "?v=1";
+    });
+  });
+}
+
+// ============================
 //  Lazy load (kategori görselleri)
 // ============================
-
 function lazyLoadCategoryImages() {
   const obs = new IntersectionObserver((entries, o) => {
     entries.forEach(entry => {
@@ -123,7 +135,7 @@ function lazyLoadCategoryImages() {
         const el = entry.target;
         const bg = el.dataset.bg;
         if (bg) {
-          el.style.backgroundImage = `url(${bg})`;
+          el.style.backgroundImage = `url(${bg}?v=1)`;
           el.removeAttribute("data-bg");
         }
         o.unobserve(el);
