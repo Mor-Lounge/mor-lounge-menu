@@ -1,6 +1,6 @@
 // ============================
 //   Mor Lounge Menü - Final Turbo
-//   JSON + Sheets fallback + Smart Preload
+//   JSON Only + Smart Preload
 // ============================
 
 // 🔧 Ayarlar
@@ -13,26 +13,30 @@ const catContainer = document.getElementById("categories");
 const menuContainer = document.getElementById("menu");
 const themeBtn = document.getElementById("themeToggle");
 
-// Başlat
-init();
+// ============================
+//  🚀 SADECE JSON KULLANAN YENİ INIT
+// ============================
 
 async function init() {
   try {
     const res = await fetch(JSON_URL, { cache: "no-cache" });
-    if (!res.ok) throw new Error("menu.json bulunamadı");
+    if (!res.ok) throw new Error("menu.json okunamadı");
+
     const json = await res.json();
     const data = normalizeJson(json);
     buildUI(data);
+
   } catch (err) {
-    console.warn("menu.json okunamadı, Sheets'ten yükleniyor →", err.message);
-    const gvizText = await fetch(GVIZ_URL).then((r) => r.text());
-    const data = parseGviz(gvizText);
-    buildUI(data);
+    console.error("menu.json yüklenemedi:", err.message);
+    alert("Menü yüklenemedi. Lütfen data/menu.json dosyasını kontrol edin.");
   }
 }
 
+// Başlat
+init();
+
 // ============================
-//  JSON ve GVIZ verisini dönüştür
+//  JSON verisini düzenle
 // ============================
 
 function normalizeJson(arr) {
@@ -45,23 +49,6 @@ function normalizeJson(arr) {
     const img = row["Görsel URL"] || "";
     const catImg = row["CategoryImg"] || "";
 
-    if (!data[category]) data[category] = { items: [], img: catImg };
-    data[category].items.push({ name, price, desc, img });
-  });
-  return data;
-}
-
-function parseGviz(rep) {
-  const jsonData = JSON.parse(rep.substring(47, rep.length - 2));
-  const rows = jsonData.table.rows;
-  const data = {};
-  rows.forEach((r) => {
-    const category = r.c[0]?.v || "";
-    const name = r.c[1]?.v || "";
-    const price = r.c[2]?.v || "";
-    const desc = r.c[3]?.v || "";
-    const img = r.c[4]?.v || "";
-    const catImg = r.c[5]?.v || "";
     if (!data[category]) data[category] = { items: [], img: catImg };
     data[category].items.push({ name, price, desc, img });
   });
@@ -117,7 +104,7 @@ function showCategory(category, element, data) {
 }
 
 // ============================
-//  ⚡ Akıllı (Smart) Görsel Yükleme
+//  ⚡ Akıllı Preload
 // ============================
 
 function smartPreloadImages(data) {
@@ -128,10 +115,9 @@ function smartPreloadImages(data) {
     });
   });
 
-  // Görselleri arka planda yavaşça önceden yükle
   let loaded = 0;
   const total = allImages.length;
-  const batchSize = 8; // aynı anda 8 istek
+  const batchSize = 8;
   let index = 0;
 
   function loadNextBatch() {
@@ -140,7 +126,6 @@ function smartPreloadImages(data) {
       const img = new Image();
       img.onload = () => {
         loaded++;
-        // Eğer ilk 20 görsel geldiyse, sayfa anında görsel gösterir
         if (loaded === 20) document.body.classList.add("images-ready");
       };
       img.src = src;
