@@ -2,7 +2,7 @@
   {
     "Kategori": "Başlangıçlar",
     "Ürün Adı": "Patates Tava",
-    "Fiyat": 180,
+    "Fiyat": 220,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/patatessss_tava.webp",
     "CategoryImg": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/baslangic.webp"
@@ -10,7 +10,7 @@
   {
     "Kategori": "Burgerler",
     "Ürün Adı": "Tavuk Burger",
-    "Fiyat": 240,
+    "Fiyat": 300,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/tavuk_burger.webp",
     "CategoryImg": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/burger.webp"
@@ -18,7 +18,7 @@
   {
     "Kategori": "Tostlar",
     "Ürün Adı": "Kaşarlı Tost",
-    "Fiyat": 180,
+    "Fiyat": 220,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/Kasarli_tost.webp",
     "CategoryImg": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/tostlar.webp"
@@ -26,7 +26,7 @@
   {
     "Kategori": "Başlangıçlar",
     "Ürün Adı": "Sosis Tava",
-    "Fiyat": 230,
+    "Fiyat": 250,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/sosissssss_tavaa.webp",
     "CategoryImg": ""
@@ -34,7 +34,7 @@
   {
     "Kategori": "Başlangıçlar",
     "Ürün Adı": "Nugget",
-    "Fiyat": 230,
+    "Fiyat": 250,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/nugget.webp",
     "CategoryImg": ""
@@ -42,7 +42,7 @@
   {
     "Kategori": "Başlangıçlar",
     "Ürün Adı": "Şinitzel",
-    "Fiyat": 230,
+    "Fiyat": 250,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/sinitzel.webp",
     "CategoryImg": ""
@@ -50,7 +50,7 @@
   {
     "Kategori": "Başlangıçlar",
     "Ürün Adı": "Peynirli Kroket",
-    "Fiyat": 230,
+    "Fiyat": 250,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/peynirli_kroket.webp",
     "CategoryImg": ""
@@ -58,7 +58,7 @@
   {
     "Kategori": "Başlangıçlar",
     "Ürün Adı": "Sigara Böreği",
-    "Fiyat": 230,
+    "Fiyat": 280,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/sigara_boregi.webp",
     "CategoryImg": ""
@@ -66,7 +66,7 @@
   {
     "Kategori": "Başlangıçlar",
     "Ürün Adı": "Kombo Tabağı",
-    "Fiyat": 350,
+    "Fiyat": 400,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/kombo_tabagı.webp",
     "CategoryImg": ""
@@ -74,7 +74,7 @@
   {
     "Kategori": "Burgerler",
     "Ürün Adı": "Acılı Tavuk Burger",
-    "Fiyat": 250,
+    "Fiyat": 300,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/acili_tavuk_burger.webp",
     "CategoryImg": ""
@@ -82,7 +82,7 @@
   {
     "Kategori": "Burgerler",
     "Ürün Adı": "Klasik Burger",
-    "Fiyat": 280,
+    "Fiyat": 370,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/klasik_burger.webp",
     "CategoryImg": ""
@@ -90,7 +90,7 @@
   {
     "Kategori": "Burgerler",
     "Ürün Adı": "Cheese Burger",
-    "Fiyat": 290,
+    "Fiyat": 400,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/cheese_burger.webp",
     "CategoryImg": ""
@@ -98,7 +98,7 @@
   {
     "Kategori": "Burgerler",
     "Ürün Adı": "Mantar Burger",
-    "Fiyat": 290,
+    "Fiyat": 400,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/mantar_burger.webp",
     "CategoryImg": ""
@@ -106,7 +106,7 @@
   {
     "Kategori": "Burgerler",
     "Ürün Adı": "Meksika Burger",
-    "Fiyat": 290,
+    "Fiyat": 400,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/meksika_burger.webp",
     "CategoryImg": ""
@@ -114,7 +114,7 @@
   {
     "Kategori": "Tostlar",
     "Ürün Adı": "Sucuklu Tost",
-    "Fiyat": 180,
+    "Fiyat": 220,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/sucuklu_tost.webp",
     "CategoryImg": ""
@@ -122,7 +122,7 @@
   {
     "Kategori": "Tostlar",
     "Ürün Adı": "Beyaz Peynirli Tost",
-    "Fiyat": 180,
+    "Fiyat": 235,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/beyaz_peynirli_tost.webp",
     "CategoryImg": ""
@@ -130,7 +130,7 @@
   {
     "Kategori": "Tostlar",
     "Ürün Adı": "Dubble Kaşarlı Tost",
-    "Fiyat": 200,
+    "Fiyat": 250,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/duble_kasarli_tost.webp",
     "CategoryImg": ""
@@ -138,7 +138,7 @@
   {
     "Kategori": "Tavuklar",
     "Ürün Adı": "Köri Soslu Tavuk",
-    "Fiyat": 300,
+    "Fiyat": 400,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/köri_soslu_tavuk.webp",
     "CategoryImg": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/tavuklar.webp"
@@ -146,7 +146,7 @@
   {
     "Kategori": "Tavuklar",
     "Ürün Adı": "Acılı Köri Soslu Tavuk",
-    "Fiyat": 300,
+    "Fiyat": 400,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/acili_korili_tavuk.webp",
     "CategoryImg": ""
@@ -154,7 +154,7 @@
   {
     "Kategori": "Tavuklar",
     "Ürün Adı": "Dağ Kekikli Tavuk",
-    "Fiyat": 300,
+    "Fiyat": 400,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/dag_kekikli_kremali_tavuk.webp",
     "CategoryImg": ""
@@ -162,7 +162,7 @@
   {
     "Kategori": "Tavuklar",
     "Ürün Adı": "Barbekü Soslu Tavuk",
-    "Fiyat": 300,
+    "Fiyat": 400,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/barbeku-soslu-tavuk.webp",
     "CategoryImg": ""
@@ -170,7 +170,7 @@
   {
     "Kategori": "Tavuklar",
     "Ürün Adı": "Acılı Tavuk",
-    "Fiyat": 300,
+    "Fiyat": 400,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/acili_tavuk.webp",
     "CategoryImg": ""
@@ -178,7 +178,7 @@
   {
     "Kategori": "Tavuklar",
     "Ürün Adı": "Sweet Chill Tavuk",
-    "Fiyat": 300,
+    "Fiyat": 400,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/Sweet_Chill_Tavuk.webp",
     "CategoryImg": ""
@@ -186,7 +186,7 @@
   {
     "Kategori": "Tavuklar",
     "Ürün Adı": "Kremalı Mantarlı Tavuk",
-    "Fiyat": 300,
+    "Fiyat": 400,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/mantarli_tavuk.webp",
     "CategoryImg": ""
@@ -194,7 +194,7 @@
   {
     "Kategori": "Tavuklar",
     "Ürün Adı": "Cafede Paris Soslu Tavuk",
-    "Fiyat": 300,
+    "Fiyat": 400,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/cafede_paris_tavuk.webp",
     "CategoryImg": ""
@@ -202,7 +202,7 @@
   {
     "Kategori": "Tavuklar",
     "Ürün Adı": "Meksika Acılı Tavuk",
-    "Fiyat": 300,
+    "Fiyat": 400,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/Meksika_Soslu_Tavuk.webp",
     "CategoryImg": ""
@@ -210,7 +210,7 @@
   {
     "Kategori": "Tostlar",
     "Ürün Adı": "Karışık Tost",
-    "Fiyat": 200,
+    "Fiyat": 250,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/karisik_tost.webp",
     "CategoryImg": ""
@@ -218,7 +218,7 @@
   {
     "Kategori": "Tostlar",
     "Ürün Adı": "Dubble Karışık Tost",
-    "Fiyat": 250,
+    "Fiyat": 300,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/duble_karisik_tost.webp",
     "CategoryImg": ""
@@ -226,7 +226,7 @@
   {
     "Kategori": "Izgaralar",
     "Ürün Adı": "Tavuk Izgara",
-    "Fiyat": 320,
+    "Fiyat": 450,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/tavuk_izgara.webp",
     "CategoryImg": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/izgaralar.webp"
@@ -234,7 +234,7 @@
   {
     "Kategori": "Izgaralar",
     "Ürün Adı": "Köfte Izgara",
-    "Fiyat": 370,
+    "Fiyat": 480,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/Kofte_izgara.webp",
     "CategoryImg": ""
@@ -242,7 +242,7 @@
   {
     "Kategori": "Izgaralar",
     "Ürün Adı": "Antrikot Izgara",
-    "Fiyat": 450,
+    "Fiyat": 550,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/Antrikot_izgara.webp",
     "CategoryImg": ""
@@ -250,7 +250,7 @@
   {
     "Kategori": "Izgaralar",
     "Ürün Adı": "Karışık Izgara",
-    "Fiyat": 600,
+    "Fiyat": 750,
     "Açıklama": "Tavuk-Köfte-Et",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/karisik_izgara.webp",
     "CategoryImg": ""
@@ -258,7 +258,7 @@
   {
     "Kategori": "Çökertmeler",
     "Ürün Adı": "Tavuk Çökertme",
-    "Fiyat": 350,
+    "Fiyat": 480,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/tavuklu_cokertme.webp",
     "CategoryImg": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/cokertmeler.webp"
@@ -266,7 +266,7 @@
   {
     "Kategori": "Çökertmeler",
     "Ürün Adı": "Et Çökertme",
-    "Fiyat": 400,
+    "Fiyat": 550,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/et_cokertme.webp",
     "CategoryImg": ""
@@ -274,7 +274,7 @@
   {
     "Kategori": "Çökertmeler",
     "Ürün Adı": "Kombo çökertme",
-    "Fiyat": 500,
+    "Fiyat": 750,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/kombo_cokertme.webp",
     "CategoryImg": ""
@@ -282,7 +282,7 @@
   {
     "Kategori": "Dürüm & Wrap",
     "Ürün Adı": "Tavuklu Wrap",
-    "Fiyat": 300,
+    "Fiyat": 400,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/tavuklu_wrap.webp",
     "CategoryImg": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/Durum%20Wrap.webp"
@@ -290,7 +290,7 @@
   {
     "Kategori": "Dürüm & Wrap",
     "Ürün Adı": "Çıtır Tavuk Dürüm",
-    "Fiyat": 300,
+    "Fiyat": 400,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/çıtır_tavuklu_wrap.webp",
     "CategoryImg": ""
