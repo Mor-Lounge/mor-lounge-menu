@@ -1146,7 +1146,7 @@
   {
     "Kategori": "Soğuk Kahveler",
     "Ürün Adı": "Çikolatalı Frappe",
-    "Fiyat": 180,
+    "Fiyat": 220,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/cikolataliii_frappe.webp",
     "CategoryImg": ""
@@ -1154,7 +1154,7 @@
   {
     "Kategori": "Smootie",
     "Ürün Adı": "Çilekli",
-    "Fiyat": 220,
+    "Fiyat": 280,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/cilekli_smoothie.webp",
     "CategoryImg": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/smootieler.webp"
@@ -1162,7 +1162,7 @@
   {
     "Kategori": "Smootie",
     "Ürün Adı": "Muzlu",
-    "Fiyat": 220,
+    "Fiyat": 280,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/Muzlu_smoothie.webp",
     "CategoryImg": ""
@@ -1170,7 +1170,7 @@
   {
     "Kategori": "Smootie",
     "Ürün Adı": "Çilek-Muz",
-    "Fiyat": 220,
+    "Fiyat": 280,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/cilek_ve_muz_smoothie.webp",
     "CategoryImg": ""
@@ -1178,7 +1178,7 @@
   {
     "Kategori": "Smootie",
     "Ürün Adı": "Kivi",
-    "Fiyat": 220,
+    "Fiyat": 280,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/kivili_smoothie.webp",
     "CategoryImg": ""
@@ -1186,7 +1186,7 @@
   {
     "Kategori": "Kokteyller",
     "Ürün Adı": "Mojito",
-    "Fiyat": 250,
+    "Fiyat": 300,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/mojito.webp",
     "CategoryImg": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/kokteyller.webp"
@@ -1194,7 +1194,7 @@
   {
     "Kategori": "Kokteyller",
     "Ürün Adı": "Ocean Blue",
-    "Fiyat": 250,
+    "Fiyat": 300,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/ocean_kokteyl.webp",
     "CategoryImg": ""
@@ -1202,7 +1202,7 @@
   {
     "Kategori": "Kokteyller",
     "Ürün Adı": "Sweet Drem",
-    "Fiyat": 250,
+    "Fiyat": 300,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/sweet_kokteyl.webp",
     "CategoryImg": ""
