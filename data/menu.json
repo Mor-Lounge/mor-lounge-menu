@@ -314,7 +314,7 @@
   {
     "Kategori": "Makarna & Mantı",
     "Ürün Adı": "Penne Arabiata",
-    "Fiyat": 330,
+    "Fiyat": 280,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/penne_arabiata.webp",
     "CategoryImg": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/makarnalar.webp"
@@ -322,7 +322,7 @@
   {
     "Kategori": "Makarna & Mantı",
     "Ürün Adı": "Penne Pesto",
-    "Fiyat": 330,
+    "Fiyat": 280,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/penne_pesto.webp",
     "CategoryImg": ""
@@ -330,7 +330,7 @@
   {
     "Kategori": "Makarna & Mantı",
     "Ürün Adı": "Penne Köri Tavuklu",
-    "Fiyat": 350,
+    "Fiyat": 300,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/penne_köri_tavuklu.webp",
     "CategoryImg": ""
@@ -338,7 +338,7 @@
   {
     "Kategori": "Makarna & Mantı",
     "Ürün Adı": "Fettuccine Alfredo",
-    "Fiyat": 370,
+    "Fiyat": 350,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/Fettuccine_Alfredo.webp",
     "CategoryImg": ""
