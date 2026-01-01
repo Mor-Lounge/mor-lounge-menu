@@ -82,7 +82,7 @@
   {
     "Kategori": "Burgerler",
     "Ürün Adı": "Klasik Burger",
-    "Fiyat": 370,
+    "Fiyat": 350,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/klasik_burger.webp",
     "CategoryImg": ""
@@ -90,7 +90,7 @@
   {
     "Kategori": "Burgerler",
     "Ürün Adı": "Cheese Burger",
-    "Fiyat": 400,
+    "Fiyat": 380,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/cheese_burger.webp",
     "CategoryImg": ""
@@ -98,7 +98,7 @@
   {
     "Kategori": "Burgerler",
     "Ürün Adı": "Mantar Burger",
-    "Fiyat": 400,
+    "Fiyat": 380,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/mantar_burger.webp",
     "CategoryImg": ""
@@ -106,7 +106,7 @@
   {
     "Kategori": "Burgerler",
     "Ürün Adı": "Meksika Burger",
-    "Fiyat": 400,
+    "Fiyat": 380,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/meksika_burger.webp",
     "CategoryImg": ""
@@ -226,7 +226,7 @@
   {
     "Kategori": "Izgaralar",
     "Ürün Adı": "Tavuk Izgara",
-    "Fiyat": 450,
+    "Fiyat": 430,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/tavuk_izgara.webp",
     "CategoryImg": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/izgaralar.webp"
@@ -234,7 +234,7 @@
   {
     "Kategori": "Izgaralar",
     "Ürün Adı": "Köfte Izgara",
-    "Fiyat": 480,
+    "Fiyat": 450,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/Kofte_izgara.webp",
     "CategoryImg": ""
@@ -258,7 +258,7 @@
   {
     "Kategori": "Çökertmeler",
     "Ürün Adı": "Tavuk Çökertme",
-    "Fiyat": 480,
+    "Fiyat": 450,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/tavuklu_cokertme.webp",
     "CategoryImg": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/cokertmeler.webp"
@@ -266,7 +266,7 @@
   {
     "Kategori": "Çökertmeler",
     "Ürün Adı": "Et Çökertme",
-    "Fiyat": 550,
+    "Fiyat": 525,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/et_cokertme.webp",
     "CategoryImg": ""
@@ -274,7 +274,7 @@
   {
     "Kategori": "Çökertmeler",
     "Ürün Adı": "Kombo çökertme",
-    "Fiyat": 750,
+    "Fiyat": 700,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/kombo_cokertme.webp",
     "CategoryImg": ""
@@ -282,7 +282,7 @@
   {
     "Kategori": "Dürüm & Wrap",
     "Ürün Adı": "Tavuklu Wrap",
-    "Fiyat": 400,
+    "Fiyat": 350,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/tavuklu_wrap.webp",
     "CategoryImg": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/Durum%20Wrap.webp"
@@ -290,7 +290,7 @@
   {
     "Kategori": "Dürüm & Wrap",
     "Ürün Adı": "Çıtır Tavuk Dürüm",
-    "Fiyat": 400,
+    "Fiyat": 330,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/çıtır_tavuklu_wrap.webp",
     "CategoryImg": ""
@@ -298,7 +298,7 @@
   {
     "Kategori": "Dürüm & Wrap",
     "Ürün Adı": "Köfte Dürüm",
-    "Fiyat": 480,
+    "Fiyat": 400,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/kofte_durum.webp",
     "CategoryImg": ""
@@ -306,7 +306,7 @@
   {
     "Kategori": "Dürüm & Wrap",
     "Ürün Adı": "Etli Wrap",
-    "Fiyat": 550,
+    "Fiyat": 425,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/etli_wrap.webp",
     "CategoryImg": ""
@@ -346,7 +346,7 @@
   {
     "Kategori": "Makarna & Mantı",
     "Ürün Adı": "Fettuccine Şinitzel",
-    "Fiyat": 370,
+    "Fiyat": 350,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/Fettuccine_sinitzel.webp",
     "CategoryImg": ""
@@ -354,7 +354,7 @@
   {
     "Kategori": "Makarna & Mantı",
     "Ürün Adı": "Fettuccine Köfte",
-    "Fiyat": 400,
+    "Fiyat": 375,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/Fettuccine_Kofte.webp",
     "CategoryImg": ""
@@ -362,7 +362,7 @@
   {
     "Kategori": "Makarna & Mantı",
     "Ürün Adı": "Spagetti Ton Balıklı",
-    "Fiyat": 400,
+    "Fiyat": 375,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/Spagetti_Ton_Balikli.webp",
     "CategoryImg": ""
@@ -370,7 +370,7 @@
   {
     "Kategori": "Makarna & Mantı",
     "Ürün Adı": "Spagetti Bolonez",
-    "Fiyat": 420,
+    "Fiyat": 400,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/Spagetti_Bolonez.webp",
     "CategoryImg": ""
@@ -378,7 +378,7 @@
   {
     "Kategori": "Makarna & Mantı",
     "Ürün Adı": "Üç Renkli Tortelline",
-    "Fiyat": 400,
+    "Fiyat": 380,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/uc_renkli_tortall.webp",
     "CategoryImg": ""
@@ -386,7 +386,7 @@
   {
     "Kategori": "Makarna & Mantı",
     "Ürün Adı": "Mantı",
-    "Fiyat": 380,
+    "Fiyat": 330,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/mant.webp",
     "CategoryImg": ""
@@ -394,7 +394,7 @@
   {
     "Kategori": "Makarna & Mantı",
     "Ürün Adı": "Sinop Mantı",
-    "Fiyat": 400,
+    "Fiyat": 380,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/sinop_mantısı.webp",
     "CategoryImg": ""
@@ -402,7 +402,7 @@
   {
     "Kategori": "Salatalar",
     "Ürün Adı": "Mevsim Salata",
-    "Fiyat": 280,
+    "Fiyat": 270,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/mevsim_salata.webp",
     "CategoryImg": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/salatalar.webp"
@@ -410,7 +410,7 @@
   {
     "Kategori": "Salatalar",
     "Ürün Adı": "Akdeniz Salata",
-    "Fiyat": 280,
+    "Fiyat": 270,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/akdeniz_salata.webp",
     "CategoryImg": ""
@@ -426,7 +426,7 @@
   {
     "Kategori": "Salatalar",
     "Ürün Adı": "Soya Soslu Tavuk Salata",
-    "Fiyat": 300,
+    "Fiyat": 290,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/soya_soslu_tavuklu_salaata.webp",
     "CategoryImg": ""
@@ -442,7 +442,7 @@
   {
     "Kategori": "Salatalar",
     "Ürün Adı": "Ton Balıklı Salata",
-    "Fiyat": 320,
+    "Fiyat": 300,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/ton_balikli_salata.webp",
     "CategoryImg": ""
@@ -450,7 +450,7 @@
   {
     "Kategori": "Salatalar",
     "Ürün Adı": "Antrikot Salata",
-    "Fiyat": 420,
+    "Fiyat": 400,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/antrikotlu_salata.webp",
     "CategoryImg": ""
@@ -586,7 +586,7 @@
   {
     "Kategori": "Sıcak İçecekler",
     "Ürün Adı": "Salep",
-    "Fiyat": 180,
+    "Fiyat": 150,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/salep.webp",
     "CategoryImg": ""
@@ -594,7 +594,7 @@
   {
     "Kategori": "Sıcak İçecekler",
     "Ürün Adı": "Sıcak Çikolata",
-    "Fiyat": 180,
+    "Fiyat": 150,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/sicakkkk_cikolataa.webp",
     "CategoryImg": ""
@@ -602,7 +602,7 @@
   {
     "Kategori": "Sıcak İçecekler",
     "Ürün Adı": "Sıcak Beyaz Çikolata",
-    "Fiyat": 180,
+    "Fiyat": 150,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/beyazz_cikolatasicak.webp",
     "CategoryImg": ""
