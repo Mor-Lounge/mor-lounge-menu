@@ -1518,5 +1518,13 @@
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/special_hookah.webp",
     "CategoryImg": ""
+  },
+  {
+    "Kategori": "Tatlılar",
+    "Ürün Adı": "Waffle",
+    "Fiyat": 300,
+    "Açıklama": "",
+    "Görsel URL": "",
+    "CategoryImg": ""
   }
 ]
