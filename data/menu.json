@@ -10,7 +10,7 @@
   {
     "Kategori": "Burgerler",
     "Ürün Adı": "Tavuk Burger",
-    "Fiyat": 300,
+    "Fiyat": 320,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/tavuk_burger.webp",
     "CategoryImg": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/burger.webp"
@@ -66,7 +66,7 @@
   {
     "Kategori": "Başlangıçlar",
     "Ürün Adı": "Kombo Tabağı",
-    "Fiyat": 430,
+    "Fiyat": 450,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/kombo_tabagı.webp",
     "CategoryImg": ""
