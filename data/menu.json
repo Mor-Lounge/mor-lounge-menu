@@ -26,7 +26,7 @@
   {
     "Kategori": "Başlangıçlar",
     "Ürün Adı": "Sosis Tava",
-    "Fiyat": 275,
+    "Fiyat": 300,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/sosissssss_tavaa.webp",
     "CategoryImg": ""
@@ -34,7 +34,7 @@
   {
     "Kategori": "Başlangıçlar",
     "Ürün Adı": "Nugget",
-    "Fiyat": 275,
+    "Fiyat": 300,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/nugget.webp",
     "CategoryImg": ""
@@ -42,7 +42,7 @@
   {
     "Kategori": "Başlangıçlar",
     "Ürün Adı": "Şinitzel",
-    "Fiyat": 275,
+    "Fiyat": 300,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/sinitzel.webp",
     "CategoryImg": ""
@@ -114,7 +114,7 @@
   {
     "Kategori": "Tostlar",
     "Ürün Adı": "Sucuklu Tost",
-    "Fiyat": 220,
+    "Fiyat": 250,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/sucuklu_tost.webp",
     "CategoryImg": ""
@@ -122,7 +122,7 @@
   {
     "Kategori": "Tostlar",
     "Ürün Adı": "Beyaz Peynirli Tost",
-    "Fiyat": 235,
+    "Fiyat": 260,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/beyaz_peynirli_tost.webp",
     "CategoryImg": ""
@@ -130,7 +130,7 @@
   {
     "Kategori": "Tostlar",
     "Ürün Adı": "Dubble Kaşarlı Tost",
-    "Fiyat": 250,
+    "Fiyat": 280,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/duble_kasarli_tost.webp",
     "CategoryImg": ""
@@ -210,7 +210,7 @@
   {
     "Kategori": "Tostlar",
     "Ürün Adı": "Karışık Tost",
-    "Fiyat": 250,
+    "Fiyat": 280,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/karisik_tost.webp",
     "CategoryImg": ""
@@ -218,7 +218,7 @@
   {
     "Kategori": "Tostlar",
     "Ürün Adı": "Dubble Karışık Tost",
-    "Fiyat": 300,
+    "Fiyat": 330,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/duble_karisik_tost.webp",
     "CategoryImg": ""
