@@ -2,7 +2,7 @@
   {
     "Kategori": "Başlangıçlar",
     "Ürün Adı": "Patates Tava",
-    "Fiyat": 220,
+    "Fiyat": 250,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/patatessss_tava.webp",
     "CategoryImg": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/baslangic.webp"
@@ -18,7 +18,7 @@
   {
     "Kategori": "Tostlar",
     "Ürün Adı": "Kaşarlı Tost",
-    "Fiyat": 220,
+    "Fiyat": 250,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/Kasarli_tost.webp",
     "CategoryImg": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/tostlar.webp"
@@ -50,7 +50,7 @@
   {
     "Kategori": "Başlangıçlar",
     "Ürün Adı": "Peynirli Kroket",
-    "Fiyat": 275,
+    "Fiyat": 300,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/peynirli_kroket.webp",
     "CategoryImg": ""
@@ -58,7 +58,7 @@
   {
     "Kategori": "Başlangıçlar",
     "Ürün Adı": "Sigara Böreği",
-    "Fiyat": 285,
+    "Fiyat": 320,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/sigara_boregi.webp",
     "CategoryImg": ""
@@ -66,7 +66,7 @@
   {
     "Kategori": "Başlangıçlar",
     "Ürün Adı": "Kombo Tabağı",
-    "Fiyat": 400,
+    "Fiyat": 430,
     "Açıklama": "",
     "Görsel URL": "https://cdn.jsdelivr.net/gh/Mor-Lounge/mor-lounge-menu/images/kombo_tabagı.webp",
     "CategoryImg": ""
